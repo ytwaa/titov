@@ -1,0 +1,25 @@
+{{define "layout"}}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Учёт трат</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Мой Учёт Трат</h1>
+        <nav>
+            <a href="/">Главная</a> |
+            <a href="/add">Добавить трату</a>
+        </nav>
+    </header>
+    <main>
+        {{template "content" .}}
+    </main>
+    <footer>
+        <p>© 2026 Учебный проект на Go</p>
+    </footer>
+</body>
+</html>
+{{end}}

@@ -1,0 +1,27 @@
+{{define "content"}}
+    <h2>Список трат</h2>
+    {{if .}}
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Дата</th>
+                    <th>Сумма</th>
+                    <th>Описание</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{range .}}
+                <tr>
+                    <td>{{.ID}}</td>
+                    <td>{{.Date.Format "02.01.2006"}}</td>
+                    <td>{{.SumFormatted}} ₽</td>
+                    <td>{{.Description}}</td>
+                </tr>
+                {{end}}
+            </tbody>
+        </table>
+    {{else}}
+        <p>Пока нет ни одной траты. <a href="/add">Добавить первую?</a></p>
+    {{end}}
+{{end}}
