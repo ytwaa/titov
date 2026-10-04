@@ -1,0 +1,17 @@
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Модули зависимостей (если хотите хранить только go.mod)
+go.sum
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
